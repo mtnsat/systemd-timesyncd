@@ -3,8 +3,8 @@
   apt:
     name: systemd-timesyncd
     state: present
-    when:
-       ansible_distribution == 'Ubuntu' and ansible_distribution_version >= '20.04'
+  when:
+    ansible_distribution == 'Ubuntu' and ansible_distribution_version >= '20.04'
 
 - name: Set timezone
   timezone:
