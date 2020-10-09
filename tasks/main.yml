@@ -1,4 +1,9 @@
 ---
+- name: Install Timesyncd or make sure it exists
+  apt:
+    name: systemd-timesyncd
+    state: present
+
 - name: Set timezone
   timezone:
     name: "{{ timesync_timezone }}"
